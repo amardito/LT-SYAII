@@ -81,6 +81,26 @@ This repository hosts my personal portfolio website, which is actually a **Dynam
 
 *(Check out `GUIDE.md` to learn how to deploy this template for yourself!)*
 
+### 🚂 Deploy on Railway
+
+This project works with Railway + Nixpacks (no `railway.json` required).
+
+1. Create a new Railway project and select this repository.
+2. Railway will install dependencies and run `npm run build`.
+3. Set the start command to:
+   ```bash
+   npm run start
+   ```
+4. Add these environment variables in Railway:
+   ```env
+   ADMIN_PASSWORD=your_admin_password
+   SESSION_SECRET=your_long_random_secret
+   HOST=0.0.0.0
+   ```
+   `PORT` is provided automatically by Railway and is used by the Astro Node server.
+
+Healthcheck endpoint: `GET /api/health`
+
 ---
 
 ### 📬 Get in Touch
